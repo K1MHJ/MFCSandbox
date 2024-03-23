@@ -28,9 +28,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{1E48BC4A-2E3A-4D52-B5B2-174466B55F6D}</ProjectGuid>
+    <ProjectGuid>{4E8D0687-3D01-48B0-9E67-859347D0CF36}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>MFCApplication3</RootNamespace>
+    <RootNamespace>DemoApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,12 +128,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)MyMFCLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)MyMFCLib\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>MMLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>MMLib.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -269,16 +269,22 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DemoApp.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="MenuBar.h" />
+    <ClInclude Include="TitleDlgBar.h" />
     <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="MFCApplication3.h" />
+    <ClInclude Include="MainView.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DemoApp.cpp" />
+    <ClCompile Include="MenuBar.cpp" />
+    <ClCompile Include="TitleDlgBar.cpp" />
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="MFCApplication3.cpp" />
+    <ClCompile Include="MainView.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -289,14 +295,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFCApplication3.rc" />
+    <ResourceCompile Include="DemoApp.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MFCApplication3.rc2" />
+    <None Include="res\DemoApp.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\MFCApplication3.ico" />
-    <Image Include="res\MFCApplication3Doc.ico" />
+    <Image Include="res\DemoApp.ico" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="memo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

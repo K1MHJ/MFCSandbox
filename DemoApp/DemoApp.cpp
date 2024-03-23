@@ -1,12 +1,12 @@
 
-// MFCApplication3.cpp : Defines the class behaviors for the application.
+// DemoApp.cpp : Defines the class behaviors for the application.
 //
 
 #include "pch.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "MFCApplication3.h"
+#include "DemoApp.h"
 #include "MainFrm.h"
 
 
@@ -15,38 +15,36 @@
 #endif
 
 
-// CMFCApplication3App
+// CDemoAppApp
 
-BEGIN_MESSAGE_MAP(CMFCApplication3App, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CMFCApplication3App::OnAppAbout)
-	// Standard file based document commands
-	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
+BEGIN_MESSAGE_MAP(CDemoAppApp, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CDemoAppApp::OnAppAbout)
 END_MESSAGE_MAP()
 
 
-// CMFCApplication3App construction
+// CDemoAppApp construction
 
-CMFCApplication3App::CMFCApplication3App() noexcept
+CDemoAppApp::CDemoAppApp() noexcept
 {
 
 	// TODO: replace application ID string below with unique ID string; recommended
 	// format for string is CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("MFCApplication3.AppID.NoVersion"));
+	SetAppID(_T("DemoApp.AppID.NoVersion"));
 
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 }
 
-// The one and only CMFCApplication3App object
+// The one and only CDemoAppApp object
 
-CMFCApplication3App theApp;
+CDemoAppApp theApp;
 
 
-// CMFCApplication3App initialization
+// CDemoAppApp initialization
 
-BOOL CMFCApplication3App::InitInstance()
+BOOL CDemoAppApp::InitInstance()
 {
+	AfxOleInit();
 	CWinApp::InitInstance();
 
 
@@ -63,36 +61,32 @@ BOOL CMFCApplication3App::InitInstance()
 	// TODO: You should modify this string to be something appropriate
 	// such as the name of your company or organization
 	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
-	LoadStdProfileSettings(4);  // Load standard INI file options (including MRU)
 
 
-	// Register the application's document templates.  Document templates
-	//  serve as the connection between documents, frame windows and views
-	CMainFrame* pMainFrame = new CMainFrame;
-	m_pMainWnd = pMainFrame;
-	//pMainFrame->LoadFrame(IDD_MFCAPPLICATION3_FORM);
-	pMainFrame->LoadFrame(IDR_MAINFRAME,
+	// To create the main window, this code creates a new frame window
+	// object and then sets it as the application's main window object
+	CFrameWnd* pFrame = new CMainFrame;
+	if (!pFrame)
+		return FALSE;
+	m_pMainWnd = pFrame;
+	// create and load the frame with its resources
+	pFrame->LoadFrame(IDR_MAINFRAME,
 		WS_OVERLAPPEDWINDOW | FWS_ADDTOTITLE, nullptr,
 		nullptr);
 
-	// Parse command line for standard shell commands, DDE, file open
-	CCommandLineInfo cmdInfo;
-	ParseCommandLine(cmdInfo);
-
-
-
-	// Dispatch commands specified on the command line.  Will return FALSE if
-	// app was launched with /RegServer, /Register, /Unregserver or /Unregister.
-	if (!ProcessShellCommand(cmdInfo))
-		return FALSE;
-
 	// The one and only window has been initialized, so show and update it
-	m_pMainWnd->ShowWindow(SW_SHOW);
-	m_pMainWnd->UpdateWindow();
+	pFrame->ShowWindow(SW_SHOW);
+	pFrame->UpdateWindow();
 	return TRUE;
 }
 
-// CMFCApplication3App message handlers
+int CDemoAppApp::ExitInstance()
+{
+	//TODO: handle additional resources you may have added
+	return CWinApp::ExitInstance();
+}
+
+// CDemoAppApp message handlers
 
 
 // CAboutDlg dialog used for App About
@@ -128,13 +122,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // App command to run the dialog
-void CMFCApplication3App::OnAppAbout()
+void CDemoAppApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CMFCApplication3App message handlers
+// CDemoAppApp message handlers
 
 
 

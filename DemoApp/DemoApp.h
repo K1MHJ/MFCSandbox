@@ -1,5 +1,5 @@
 
-// MFCApplication3.h : main header file for the MFCApplication3 application
+// DemoApp.h : main header file for the DemoApp application
 //
 #pragma once
 
@@ -10,23 +10,26 @@
 #include "resource.h"       // main symbols
 
 
-// CMFCApplication3App:
-// See MFCApplication3.cpp for the implementation of this class
+// CDemoAppApp:
+// See DemoApp.cpp for the implementation of this class
 //
 
-class CMFCApplication3App : public CWinApp
+class CDemoAppApp : public CWinApp
 {
 public:
-	CMFCApplication3App() noexcept;
+	CDemoAppApp() noexcept;
 
 
 // Overrides
 public:
 	virtual BOOL InitInstance();
+	virtual int ExitInstance();
 
 // Implementation
+
+public:
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CMFCApplication3App theApp;
+extern CDemoAppApp theApp;

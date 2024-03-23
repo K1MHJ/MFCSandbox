@@ -3,14 +3,16 @@
 //
 
 #pragma once
-#include "CMMTopView.h"
+#include "MainView.h"
+#include "TitleDlgBar.h"
+#include "MenuBar.h"
 class CMainFrame : public CFrameWnd
 {
+	
 public:
 	CMainFrame() noexcept;
-protected: // create from serialization only
-	
-	DECLARE_DYNCREATE(CMainFrame)
+protected: 
+	DECLARE_DYNAMIC(CMainFrame)
 
 // Attributes
 public:
@@ -21,7 +23,7 @@ public:
 // Overrides
 public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-
+	
 // Implementation
 public:
 	virtual ~CMainFrame();
@@ -31,11 +33,16 @@ public:
 #endif
 
 protected:  // control bar embedded members
-	CStatusBar        m_wndStatusBar;
-	CMMTopView* m_pMainView;
+	CReBar      m_wndReBar;
+	CTitleDlgBar  m_commonSetBar;
+	CMenuBar m_menuBar;
+
+	CStatusBar m_wndStatusBar;
+	MainView* m_pMainView;
 // Generated message map functions
 protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnSetFocus(CWnd *pOldWnd);
 	DECLARE_MESSAGE_MAP()
 
 };

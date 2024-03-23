@@ -1,0 +1,7 @@
+	m_label.SetFontSize(48);
+	m_label.SetFontColor(RGB(65, 105, 225));
+	m_label_ip.SetFontSize(24);
+	m_label_ip.SetFontColor(RGB(65,105,225));
+
+	DDX_Control(pDX, IDC_LABEL_ICON, m_label);
+	DDX_Control(pDX, IDC_LABEL_IP, m_label_ip);

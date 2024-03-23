@@ -203,17 +203,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CMMDialogBar.h" />
     <ClInclude Include="CMMHeaderCtrl.h" />
+    <ClInclude Include="CMMLabel.h" />
     <ClInclude Include="CMMListCtrl.h" />
-    <ClInclude Include="CMMTopView.h" />
+    <ClInclude Include="CMMToolBar.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CMMDialogBar.cpp" />
     <ClCompile Include="CMMHeaderCtrl.cpp" />
+    <ClCompile Include="CMMLabel.cpp" />
     <ClCompile Include="CMMListCtrl.cpp" />
-    <ClCompile Include="CMMTopView.cpp" />
+    <ClCompile Include="CMMToolBar.cpp" />
     <ClCompile Include="MyMFCLib.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
