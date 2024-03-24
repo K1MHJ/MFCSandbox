@@ -39,6 +39,12 @@
     <ClInclude Include="CMMDialogBar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CMMMenuButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMMFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyMFCLib.cpp">
@@ -60,6 +66,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CMMDialogBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMMenuButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMMFont.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

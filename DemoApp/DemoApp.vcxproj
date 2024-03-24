@@ -269,6 +269,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CFileView.h" />
     <ClInclude Include="DemoApp.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MenuBar.h" />
@@ -280,6 +281,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CFileView.cpp" />
     <ClCompile Include="DemoApp.cpp" />
     <ClCompile Include="MenuBar.cpp" />
     <ClCompile Include="TitleDlgBar.cpp" />

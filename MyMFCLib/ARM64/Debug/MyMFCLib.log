@@ -1,0 +1,5 @@
+﻿  CMMMenuButton.cpp
+C:\Users\hyungjinkim\dev\MFCSandbox\MyMFCLib\CMMMenuButton.cpp(129,28): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+  (compiling source file '/CMMMenuButton.cpp')
+  
+  MyMFCLib.vcxproj -> C:\Users\hyungjinkim\dev\MFCSandbox\ARM64\Debug\MMLib.lib

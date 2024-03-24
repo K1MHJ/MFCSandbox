@@ -204,9 +204,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CMMDialogBar.h" />
+    <ClInclude Include="CMMFont.h" />
     <ClInclude Include="CMMHeaderCtrl.h" />
     <ClInclude Include="CMMLabel.h" />
     <ClInclude Include="CMMListCtrl.h" />
+    <ClInclude Include="CMMMenuButton.h" />
     <ClInclude Include="CMMToolBar.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
@@ -214,9 +216,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CMMDialogBar.cpp" />
+    <ClCompile Include="CMMFont.cpp" />
     <ClCompile Include="CMMHeaderCtrl.cpp" />
     <ClCompile Include="CMMLabel.cpp" />
     <ClCompile Include="CMMListCtrl.cpp" />
+    <ClCompile Include="CMMMenuButton.cpp" />
     <ClCompile Include="CMMToolBar.cpp" />
     <ClCompile Include="MyMFCLib.cpp" />
     <ClCompile Include="pch.cpp">

@@ -9,6 +9,7 @@
 
 #include "resource.h"       // main symbols
 
+#define UM_CLICK_MENU_BTN  100
 
 // CDemoAppApp:
 // See DemoApp.cpp for the implementation of this class
