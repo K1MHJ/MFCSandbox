@@ -31,3 +31,5 @@
 *.out
 *.app
 /.vs/MFCSandbox
+/ARM64/Debug
+/DemoApp/DemoApp.aps
